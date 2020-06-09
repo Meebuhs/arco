@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<section class="content">
+  <div class="list-posts">
+    {% assign posts = site.categories[page.category] | default: site.posts %} 
+    {% for post in posts %}
+    <div class="list-post">
+      <a href="{{ post.url }}">
+        <div class="list-post-link">
+          <img class="list-post-image" src="{{ post.image.url }}" />
+          <div class="list-post-info">
+            <div class="list-post-title">{{ post.title }}</div>
+            <div class="list-post-summary">{{ post.summary }}</div>
+          </div>
+        </div>
+      </a>
+      <div class="list-post-footer">
+        <span class="list-post-date">{{ post.date | date_to_string}}</span>
+        &middot;
+        {% capture category %}{{ post.categories | first }}{% endcapture %}
+        <a href="{{ "/projects/" }}{{ category }}"><span class="list-post-category">{{ category }}</span></a>
+      </div>
+    </div>
+    {% endfor %} 
+  </div>
+  {% include footer.html %}
+</section>
+<script src="/assets/js/post-grid-init.js"></script>

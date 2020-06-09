@@ -1,0 +1,101 @@
+@import "colours";
+@import "fonts";
+
+$sidebar-width: 330px;
+$sidebar-height-min: 100px;
+$sidebar-height: 150px;
+
+.sidebar-text {
+    h1 {
+        margin: 0;
+        :hover {
+            color: lighten($primary-highlight, 14%);
+        }
+    }
+    h6 {
+        text-transform: uppercase;
+        font-size: .9rem;
+        color: $text-colour-light;
+    }
+    a {
+        color: $primary-highlight;
+        :hover {
+            color: lighten($primary-highlight, 24%);
+        }
+    }
+}
+
+#sidebar {
+    display: flex;
+    top: 0;
+    position: fixed;
+    z-index: 9999;
+    background: $sidebar-colour;
+    color: $text-colour-light;
+    transition: all .3s ease;
+}
+
+/* vertical layout */
+@media only screen and (max-width: calc(2 * #{$sidebar-width - 1})), (orientation: portrait) {
+    #sidebar {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: $sidebar-height;
+    }
+
+    .sidebar-minimised {
+        width: 100%;
+        height: $sidebar-height-min;
+    }
+
+    .sidebar-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        flex: 1;
+        max-width: 100%;
+        margin: 190px 1em 1em 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* horizontal layout */
+@media only screen and (min-width: calc(2 * #{$sidebar-width})) and (orientation: landscape) {
+    #sidebar {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .sidebar, .sidebar-minimised {
+        width: $sidebar-width;
+        height: 100%;
+    }
+    
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1em 1em 1em calc(1em + #{$sidebar-width});
+    }
+
+    .sidebar-links {
+        margin-top: 1.67em;
+    }
+}
+
+.footer {
+    flex-shrink: 0;
+}

@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<section class="content">
+  <div class="post">
+    <h1>{{ page.title }}</h1>
+    <div class="post-header">
+      <span class="post-date">{{ page.date | date_to_string}}</span>
+      &middot;
+      {% capture category %}{{ page.categories | first }}{% endcapture %}
+      <a href="{{ "/projects/" }}{{ category }}"><span class="post-category">{{ category }}</span></a>
+    </div>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </div>
+  {% include footer.html %}
+</section>
