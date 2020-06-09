@@ -1,7 +1,5 @@
-@import "colours";
+@import "constants";
 @import "fonts";
-
-$sidebar-width: 330px;
 
 .cover-text {
     h1 {
@@ -28,7 +26,7 @@ $sidebar-width: 330px;
     width: 200px;
     border: 2px solid white;
     border-radius: 5px;
-    transition: all .3s ease;
+    transition: all .25s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +55,7 @@ $sidebar-width: 330px;
     z-index: 9999;
     background: $sidebar-colour;
     color: $text-colour-light;
-    transition: all .3s ease;
+    transition: all .25s ease;
 }
 
 /* vertical layout */
@@ -73,6 +71,11 @@ $sidebar-width: 330px;
         display: flex;
         flex-direction: column;
     }
+
+    .slide {
+        height: $sidebar-height;
+        animation-name: slide-up;
+    }
 }
 
 /* horizontal layout */
@@ -81,5 +84,30 @@ $sidebar-width: 330px;
         flex-direction: column;
         text-align: center;
         justify-content: center;
+    }
+
+    .slide {
+        width: $sidebar-width;
+        animation-name: slide-left;
+    }
+}
+
+@keyframes slide-left {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: $sidebar-width;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: $sidebar-height;
     }
 }

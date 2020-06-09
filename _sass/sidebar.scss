@@ -1,9 +1,5 @@
-@import "colours";
+@import "constants";
 @import "fonts";
-
-$sidebar-width: 330px;
-$sidebar-height-min: 100px;
-$sidebar-height: 150px;
 
 .sidebar-text {
     h1 {
@@ -32,7 +28,7 @@ $sidebar-height: 150px;
     z-index: 9999;
     background: $sidebar-colour;
     color: $text-colour-light;
-    transition: all .3s ease;
+    transition: all .25s ease;
 }
 
 /* vertical layout */
@@ -67,6 +63,19 @@ $sidebar-height: 150px;
         flex-direction: column;
         align-items: center;
     }
+
+    #fader {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        height: calc(100% - #{$sidebar-height});
+        width: 100%;
+        z-index: 9999;
+        pointer-events: none;
+        background: white;
+        animation-duration: .25s;
+        animation-timing-function: ease;
+    }
 }
 
 /* horizontal layout */
@@ -93,6 +102,19 @@ $sidebar-height: 150px;
 
     .sidebar-links {
         margin-top: 1.67em;
+    }
+
+    #fader {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: calc(100% - #{$sidebar-width});
+        height: 100%;
+        z-index: 9999;
+        pointer-events: none;
+        background: white;
+        animation-duration: .25s;
+        animation-timing-function: ease;
     }
 }
 
