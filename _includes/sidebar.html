@@ -1,14 +1,15 @@
 <section id="sidebar" class="sidebar"> 
+    <svg id="sidebar-fader"></svg>
     <div class="sidebar-text">
       <h1><a href="{{ "/projects/" | absolute_url }}" class="fade-onclick">{{ site.title | default: site.github.repository_name }}</a></h1>
       <h6>{{ site.description | default: site.github.project_tagline }}</h6>
     </div>
     <div class="sidebar-links">
         {% assign identifier = page.url | split: "/" | last %}
-        {% if identifier  == "released" %}
-            released
+        {% if identifier  == "completed" %}
+        completed
         {% else %}
-            <a href="{{ "/projects/released" }}" class="fade-onclick">released</a>
+            <a href="{{ "/projects/completed" }}" class="fade-onclick">completed</a>
         {% endif %}
         / 
         {% if identifier  == "ongoing" %}

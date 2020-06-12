@@ -28,7 +28,7 @@
     z-index: 9999;
     background: $sidebar-colour;
     color: $text-colour-light;
-    transition: all .25s ease;
+    transition: all .35s ease;
 }
 
 /* vertical layout */
@@ -64,7 +64,7 @@
         align-items: center;
     }
 
-    #fader {
+    #content-fader {
         position: fixed;
         bottom: 0;
         right: 0;
@@ -73,7 +73,22 @@
         z-index: 9999;
         pointer-events: none;
         background: white;
-        animation-duration: .25s;
+        opacity: 1;
+        animation-duration: .35s;
+        animation-timing-function: ease;
+    }
+
+    #sidebar-fader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: $sidebar-height;
+        width: 100%;
+        z-index: 9999;
+        pointer-events: none;
+        background: $sidebar-colour;
+        opacity: 1;
+        animation-duration: .35s;
         animation-timing-function: ease;
     }
 }
@@ -104,7 +119,7 @@
         margin-top: 1.67em;
     }
 
-    #fader {
+    #content-fader {
         position: fixed;
         top: 0;
         right: 0;
@@ -113,11 +128,62 @@
         z-index: 9999;
         pointer-events: none;
         background: white;
-        animation-duration: .25s;
+        opacity: 1;
+        animation-duration: .35s;
+        animation-timing-function: ease;
+    }
+
+    #sidebar-fader {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: $sidebar-width;
+        z-index: 9999;
+        pointer-events: none;
+        background: $sidebar-colour;
+        opacity: 1;
+        animation-duration: .35s;
         animation-timing-function: ease;
     }
 }
 
-.footer {
-    flex-shrink: 0;
+@keyframes fade-out {
+    from { 
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes fade-in {
+    from { 
+        opacity: 0
+    }
+    
+    to {
+        opacity: 1
+    }
+}
+
+#content-fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+
+#content-fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+
+#sidebar-fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+
+#sidebar-fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
 }

@@ -1,8 +1,11 @@
 function fadeInPage() {
         if (!window.AnimationEvent) { return; }
         
-        let fader = document.getElementById('fader');
-        fader.classList.add('fade-out');
+        let contentFader = document.getElementById('content-fader');
+        let sidebarFader = document.getElementById('sidebar-fader');
+
+        contentFader.classList.add('fade-out');
+        sidebarFader.classList.add('fade-out');
     }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -11,25 +14,36 @@ document.addEventListener("DOMContentLoaded", function() {
     let links = document.getElementsByClassName("fade-onclick");
     for (let i = 0; i < links.length; i += 1) {
         links[i].addEventListener("click", function(event) {
-            let fader = document.getElementById("fader"),
+            let contentFader = document.getElementById("content-fader"),
+                sidebarFader = document.getElementById("sidebar-fader"),
                 anchor = event.currentTarget;
             
             let listener = function() {
                 window.location = anchor.href;
-                fader.removeEventListener("animationend", listener);
+                contentFader.removeEventListener("animationend", listener);
+                sidebarFader.removeEventListener("animationend", listener);
             };
-            fader.addEventListener("animationend", listener);
+            contentFader.addEventListener("animationend", listener);
+            sidebarFader.addEventListener("animationend", listener);
             
             event.preventDefault();
-            fader.classList.add("fade-in");
+            contentFader.classList.add("fade-in");
+            sidebarFader.classList.add("fade-in");
         });
     }
 });
     
+// Remove class in case of page being cached, add class for page navigation through means other than links (eg refresh, back/forward)
 window.addEventListener("pageshow", function (event) {
     if (!event.persisted) {
         return;
     }
-    var fader = document.getElementById("fader");
-    fader.classList.remove("fade-in");
+    let contentFader = document.getElementById("content-fader");
+    let sidebarFader = document.getElementById("sidebar-fader");
+
+    contentFader.classList.remove("fade-in");
+    sidebarFader.classList.remove("fade-in");
+
+    contentFader.classList.add("fade-out");
+    sidebarFader.classList.add("fade-out");
 });

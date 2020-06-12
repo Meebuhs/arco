@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section class="content">
-  <svg id="fader"></svg>
+  <svg id="content-fader"></svg>
   <div class="list-posts">
     {% assign posts = site.categories[page.category] | default: site.posts %} 
     {% for post in posts %}
@@ -20,8 +20,7 @@ layout: default
       <div class="list-post-footer">
         <span class="list-post-date">{{ post.date | date_to_string}}</span>
         &middot;
-        {% capture category %}{{ post.categories | first }}{% endcapture %}
-        <a href="{{ "/projects/" }}{{ category }}" class="fade-onclick"><span class="list-post-category">{{ category }}</span></a>
+        <a href="{{ "/projects/" }}{{ post.category }}" class="fade-onclick"><span class="list-post-category">{{ post.category }}</span></a>
       </div>
     </div>
     {% endfor %} 
