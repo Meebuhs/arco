@@ -12,6 +12,10 @@
 .post-category { 
     font-weight: bold;
     font-size: 14px;
+    color: $primary-highlight;
+    &:hover, &:focus {
+        color: lighten($primary-highlight, 14%);
+    }
 }
 
 .post-content img {
