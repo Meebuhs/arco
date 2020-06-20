@@ -83,6 +83,60 @@ blockquote {
     padding: 0.5em 1em;
 }
 
+table, th, td {
+  border: none;
+}
+
+.table {
+  display: table;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.table-top {
+  vertical-align: top;
+}
+
+.table-middle {
+  vertical-align: middle;
+}
+
+.table-bottom {
+  vertical-align: bottom;
+}
+
+table {
+  display: table;
+  &.striped > tbody {
+    > tr:nth-child(odd) {
+      background-color: $table-background-colour;
+    }
+    > tr > td {
+      border-radius: 0;
+    }
+  }
+  &.centered {
+    thead tr th, tbody tr td, tfoot tr td {
+      text-align: center;
+    }
+  }
+}
+
+td, th {
+  padding: 10px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+
+li, ul {
+    line-height: 1.5em;
+}
+
 .content {
     width: auto;
     height: auto;
