@@ -3,10 +3,21 @@
     width: 100%;
 }
 
+.post-title h1{
+    margin-bottom: 0;
+}
+
 .post-date {
     color: $secondary-highlight;
     font-weight: bold;
     font-size: 14px;
+}
+
+.post-image {
+    display: block;
+    width: 70%;
+    margin: 2em auto 0 auto;
+    border-radius: 5px;
 }
 
 .post-category { 

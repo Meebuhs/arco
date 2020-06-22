@@ -14,9 +14,10 @@
         color: $text-colour-light;
     }
     a {
+        text-decoration: none;
         color: $primary-highlight;
-        :hover {
-            color: lighten($primary-highlight, 24%);
+        &:hover, &:focus {
+            color: lighten($primary-highlight, 14%);
         }
     }
 }
@@ -28,7 +29,7 @@
     z-index: 9999;
     background: $sidebar-colour;
     color: $text-colour-light;
-    transition: all .35s ease;
+    transition: all 1s ease;
 }
 
 /* vertical layout */

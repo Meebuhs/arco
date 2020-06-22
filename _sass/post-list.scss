@@ -20,6 +20,7 @@
 .list-post-image {
     width: 100%;
     margin-bottom: 0.4em;
+    border-radius: 5px;
 }
 
 .list-post-info {
@@ -30,6 +31,12 @@
     color: $text-colour-dark;
     font-size: 18px;
     font-weight: bold;
+    a {
+        color: white;
+        &:hover {
+            color: white;
+        }
+    }
 }
 
 .list-post-summary {

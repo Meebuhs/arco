@@ -64,8 +64,9 @@ h6 {
 
 a {
     text-decoration: none;
-    :hover, :focus {
-      text-decoration: none;
+    color: $primary-highlight;
+    &:hover, &:focus {
+        color: lighten($primary-highlight, 14%);
     }
 }
 
