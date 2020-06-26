@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "arco"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["meebuhs"]
   spec.email         = ["alexeksharpe@gmail.com"]
 
   spec.summary       = "A fixed sidebar, two column masonry grid jekyll theme."
-  spec.homepage      = "https://github.com/meebuhs/arco."
+  spec.homepage      = "https://github.com/meebuhs/arco"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }

@@ -18,6 +18,6 @@
             <a href="{{ "/projects/ongoing" }}" class="fade-onclick">ongoing</a>
         {% endif %}
         / 
-        <a href="{{ "https://github.com/meebuhs" }}">github</a> {% if site.resume %} / <a href="{{ "/resume" }}" class="fade-onclick">resume</a> {% endif %}
+        {% if site.github %}<a href="{{ site.github }}">github</a> {% endif %}{% if site.resume %} / <a href="{{ "/resume" }}" class="fade-onclick">resume</a> {% endif %}
     </div>
 </section>
