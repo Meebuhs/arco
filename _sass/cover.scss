@@ -3,10 +3,8 @@
 
 .cover-text {
     h1 {
+        color: $primary-highlight;
         margin: 0;
-        :hover {
-            color: lighten($primary-highlight, 14%);
-        }
     }
     h6 {
         text-transform: uppercase;
@@ -71,11 +69,6 @@
         display: flex;
         flex-direction: column;
     }
-
-    .slide {
-        height: $sidebar-height;
-        animation-name: slide-up;
-    }
 }
 
 /* horizontal layout */
@@ -84,30 +77,5 @@
         flex-direction: column;
         text-align: center;
         justify-content: center;
-    }
-
-    .slide {
-        width: $sidebar-width;
-        animation-name: slide-left;
-    }
-}
-
-@keyframes slide-left {
-    from {
-        width: 100%;
-    }
-
-    to {
-        width: $sidebar-width;
-    }
-}
-
-@keyframes slide-up {
-    from {
-        height: 100%;
-    }
-
-    to {
-        height: $sidebar-height;
     }
 }
