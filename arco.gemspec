@@ -2,9 +2,9 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "arco"
-  spec.version       = "0.1.1"
+  spec.version       = "0.2.0"
   spec.authors       = ["meebuhs"]
-  spec.email         = ["alexeksharpe@gmail.com"]
+  spec.email         = ["meebuhs@gmail.com"]
 
   spec.summary       = "A fixed sidebar, two column masonry grid jekyll theme."
   spec.homepage      = "https://github.com/meebuhs/arco"

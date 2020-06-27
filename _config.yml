@@ -1,2 +1,7 @@
+title: sitetitle
+description: sitedescription
+image: /assets/image.png
+github_url: https://github.com/meebuhs
+resume: true
 theme: arco
 highlighter: rouge
