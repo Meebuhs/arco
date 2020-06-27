@@ -1,8 +1,9 @@
 <section id="sidebar" class="sidebar"> 
     <svg id="sidebar-fader"></svg>
     <div class="sidebar-text">
-      <h1><a href="{{ "/projects/" | absolute_url }}" class="fade-onclick">{{ site.title | default: site.github.repository_name }}</a></h1>
-      <h6>{{ site.description | default: site.github.project_tagline }}</h6>
+        {% if site.image %}<img class="site-image" src="{{ site.image }}" />{% endif %}
+        <h1><a href="{{ "/projects/" }}" class="fade-onclick">{{ site.title }}</a></h1>
+        <h6>{{ site.description }}</h6>
     </div>
     <div class="sidebar-links">
         {% assign identifier = page.url | split: "/" | last %}
@@ -17,7 +18,6 @@
         {% else %}
             <a href="{{ "/projects/ongoing" }}" class="fade-onclick">ongoing</a>
         {% endif %}
-        / 
-        {% if site.github %}<a href="{{ site.github }}">github</a> {% endif %}{% if site.resume %} / <a href="{{ "/resume" }}" class="fade-onclick">resume</a> {% endif %}
+        {% if site.github_url %} / <a href="{{ site.github_url }}">github</a> {% endif %}{% if site.resume %} / <a href="{{ "/resume" }}" class="fade-onclick">resume</a> {% endif %}
     </div>
 </section>

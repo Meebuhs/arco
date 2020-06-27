@@ -1,9 +1,10 @@
 <section id="cover" class="cover"> 
     <div class="cover-text">
-      <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-      <h6>{{ site.description | default: site.github.project_tagline }}</h6>
+      {% if site.image %}<img class="site-image" src="{{ site.image }}" />{% endif %}
+      <h1>{{ site.title }}</a></h1>
+      <h6>{{ site.description }}</h6>
     </div>
     <div id="open-button-container" class="open-button-container">
-        <a href="/projects/" class="open-button">See my projects →</a>
+        <a href="/projects/" class="open-button">See my projects</a>
     </div>
 </section>
