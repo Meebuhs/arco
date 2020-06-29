@@ -84,12 +84,9 @@ blockquote {
     padding: 0.5em 1em;
 }
 
-table, th, td {
-  border: none;
-}
-
 .table {
   display: table;
+  border-collapse: collapse;
 }
 
 .table-cell {
@@ -114,14 +111,6 @@ table {
     > tr:nth-child(odd) {
       background-color: $table-background-colour;
     }
-    > tr > td {
-      border-radius: 0;
-    }
-  }
-  &.centered {
-    thead tr th, tbody tr td, tfoot tr td {
-      text-align: center;
-    }
   }
 }
 
@@ -130,7 +119,6 @@ td, th {
   display: table-cell;
   text-align: left;
   vertical-align: middle;
-  border-radius: 2px;
 }
 
 li, ul {
