@@ -24,7 +24,30 @@ Or install it yourself as:
 
     $ gem install arco
 
+## Github Pages
+
+In your `_config.yml` delete the `theme: ` line and add:
+
+```yaml
+remote_theme: meebuhs/arco
+```
+
+You also need to make the following changes in your `Gemfile`:
+
+```Gemfile
+# Comment the jekyll gem
+# gem "jekyll", "~> 4.1.0"
+# Uncomment github-pages
+gem "github-pages", group: :jekyll_plugins
+```
+
 ## Usage
+
+### Setup
+
+To get started you need to copy the `pages` folder from this repository to your site.
+
+By default it features a landing page, if you would like to bypass the landing page, delete `index.html` and then rename `projects.html` to `index.html`.
 
 ### Site configuration
 
@@ -52,6 +75,10 @@ top-image: /assets/image-for-top-of-post.png
 mathjax: true | false
 ---
 ```
+
+### Markdown features
+
+[Check here](https://meebuhs.github.io/projects/arco) for examples of the supported markdown features.
 
 ### Resume support
 
