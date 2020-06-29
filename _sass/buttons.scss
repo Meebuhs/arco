@@ -1,0 +1,47 @@
+@mixin button($background, $highlight) {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: all .25s ease;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid $background;
+    background-color: $background;
+    color: $highlight;
+    &:hover, &:focus {
+        background-color: $highlight;
+        color: $background;
+    }
+}
+
+.button-dark {
+    @include button(white, $sidebar-colour)
+}
+
+.button-dark-primary {
+    @include button($primary-highlight, $sidebar-colour)
+}
+
+.button-dark-secondary {
+    @include button($secondary-highlight, $sidebar-colour)
+}
+
+.button-dark-tertiary {
+    @include button($tertiary-highlight, $sidebar-colour)
+}
+
+.button-light {
+    @include button($sidebar-colour, white)
+}
+
+.button-light-primary {
+    @include button($primary-highlight, white)
+}
+
+.button-light-secondary {
+    @include button($secondary-highlight, white)
+}
+
+.button-light-tertiary {
+    @include button($tertiary-highlight, white)
+}

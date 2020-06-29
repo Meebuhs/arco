@@ -19,22 +19,11 @@
     }
 }
 
-.open-button {
-    height: 50px;
-    width: 200px;
-    border: 2px solid white;
-    border-radius: 5px;
-    transition: all .25s ease;
+#open-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: $sidebar-colour;
-    color: white;
-    &:hover, &:focus {
-        background-color: white;
-        color: $sidebar-colour
-    }
 }
 
 .open-button-container {
