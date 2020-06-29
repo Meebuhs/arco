@@ -2,6 +2,8 @@
 
 Arco is a responsive fixed-sidebar layout with a two column masonry grid which also features a landing page, a 404 page and a simple permalink structure.
 
+See this theme in use at [meebuhs.github.io](https://meebuhs.github.io) and check the [https://github.com/meebuhs/meebuhs.github.io](source code) to get yourself started.
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
