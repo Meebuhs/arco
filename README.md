@@ -1,6 +1,8 @@
 # arco
 
-Arco is a responsive fixed-sidebar layout with a two column masonry grid which also features a landing page, a 404 page and a simple permalink structure.
+Arco is a responsive fixed-sidebar layout with a two column masonry grid which also features a landing page, a 404 page, smooth page transitions and a simple permalink structure.
+
+This theme also utilises [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag) and [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) to ensure your work will be seen.
 
 See this theme in use at [meebuhs.github.io](https://meebuhs.github.io) and check the [https://github.com/meebuhs/meebuhs.github.io](source code) to get yourself started.
 
@@ -56,12 +58,18 @@ By default it features a landing page, if you would like to bypass the landing p
 The following settings can be configured in your site's `_config.yml`
 
 ```yaml
-title: Site title
-description: Site description
-image: /assets/image.png
+title: site-title
+tagline: site-tagline
+description: site-description
+image: /assets/images/image.png
+url: https://github.com/meebuhs/arco
 github_url: https://github.com/meebuhs
 resume: true | false
+author: Alex Sharpe
+lang: en-AU
 ```
+
+There are additional parameters which can be set for use with `jekyll-seo-tag`. [See here for a complete list](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md)
 
 ### Expected post frontmatter
 
@@ -69,11 +77,11 @@ resume: true | false
 ---
 layout: post
 title: Post title
-summary: Post summary
+description: Post description
 category: completed | ongoing
 permalink: /projects/post-title
 cover-image: /assets/image-for-front-page.png
-top-image: /assets/image-for-top-of-post.png 
+image: /assets/image-for-top-of-post.png 
 mathjax: true | false
 ---
 ```

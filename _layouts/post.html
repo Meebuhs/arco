@@ -2,18 +2,21 @@
 layout: default
 ---
 
-{% include mathjax.html %}
+{% if page.mathjax %}
+  {% include mathjax.html %}
+{% endif %}
 
 <section class="content">
   <svg id="content-fader"></svg>
   <div class="post">
     <div class="post-title"><h1>{{ page.title }}</h1></div>
+    <div class="post-description">{{ page.description }}</div>
     <div class="post-header">
       <span class="post-date">{{ page.date | date_to_string}}</span>
       &middot;
       <a href="{{ "/projects/" }}{{ page.category }}" class="fade-onclick"><span class="post-category">{{ page.category }}</span></a>
     </div>
-    <img class="post-image" src="{{ page.top-image }}" />
+    <img class="post-image" src="{{ page.image }}" />
 
     <div class="post-content">
       {{ content }}
