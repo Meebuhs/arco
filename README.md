@@ -4,7 +4,7 @@ Arco is a responsive fixed-sidebar layout with a two column masonry grid which a
 
 This theme also utilises [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag) and [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) to ensure your work will be seen.
 
-See this theme in use at [meebuhs.github.io](https://meebuhs.github.io) and check the [https://github.com/meebuhs/meebuhs.github.io](source code) to get yourself started.
+See this theme in use at [meebuhs.github.io](https://meebuhs.github.io) and check the [source code](https://github.com/meebuhs/meebuhs.github.io) to get yourself started.
 
 ## Installation
 
