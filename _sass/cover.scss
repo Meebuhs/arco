@@ -43,28 +43,7 @@
     background: $sidebar-colour;
     color: $text-colour-light;
     transition: all .25s ease;
-}
-
-/* vertical layout */
-@media only screen and (max-width: calc(2 * #{$sidebar-width - 1})), (orientation: portrait) {
-    #cover {
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        text-align: center;
-    }
-
-    .cover-text {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-/* horizontal layout */
-@media only screen and (min-width: calc(2 * #{$sidebar-width})) and (orientation: landscape) {
-    #cover {
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-    }
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
