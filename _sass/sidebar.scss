@@ -32,8 +32,8 @@
     transition: all .35s ease;
 }
 
-/* vertical layout */
-@media only screen and (max-width: calc(2 * #{$sidebar-width - 1})), (orientation: portrait) {
+/* portrait layout */
+@media only screen and (max-width: 768px) {
     #sidebar {
         flex-direction: row;
         justify-content: space-evenly;
@@ -94,8 +94,8 @@
     }
 }
 
-/* horizontal layout */
-@media only screen and (min-width: calc(2 * #{$sidebar-width})) and (orientation: landscape) {
+/* landscape layout */
+@media only screen and (min-width: 768px) {
     #sidebar {
         flex-direction: column;
         text-align: center;

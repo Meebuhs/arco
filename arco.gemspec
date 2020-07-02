@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "arco"
-  spec.version       = "0.4.1"
+  spec.version       = "0.4.2"
   spec.authors       = ["meebuhs"]
   spec.email         = ["meebuhs@gmail.com"]
 
