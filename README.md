@@ -86,6 +86,10 @@ mathjax: true | false
 ---
 ```
 
+### Favicon
+
+Simply add your favicon `favicon.png` to the root of your site.
+
 ### Markdown features
 
 [Check here](https://meebuhs.github.io/projects/arco) for examples of the supported markdown features.
