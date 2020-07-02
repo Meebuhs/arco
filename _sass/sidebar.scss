@@ -33,7 +33,7 @@
 }
 
 /* portrait layout */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), (orientation: portrait) {
     #sidebar {
         flex-direction: row;
         justify-content: space-evenly;
@@ -95,7 +95,7 @@
 }
 
 /* landscape layout */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px), (orientation: landscape) {
     #sidebar {
         flex-direction: column;
         text-align: center;
