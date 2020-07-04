@@ -21,6 +21,9 @@ layout: default
         <span class="list-post-date">{{ post.date | date_to_string}}</span>
         &middot;
         <a href="{{ "/projects/" }}{{ post.category }}" class="fade-onclick"><span class="list-post-category">{{ post.category }}</span></a>
+        <div class="list-post-tags">
+          {{ post.tags | join: ", "}}
+        </div>
       </div>
     </div>
     {% endfor %} 

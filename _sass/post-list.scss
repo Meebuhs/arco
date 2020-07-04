@@ -64,3 +64,10 @@
         color: lighten($primary-highlight, 14%);
     }
 }
+
+.list-post-tags {
+    font-weight: bold;
+    font-size: 14px;
+    color: $tertiary-highlight;
+    margin-top: 0.4em;
+}
