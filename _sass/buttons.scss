@@ -8,6 +8,7 @@
     border: 2px solid $background;
     background-color: $background;
     color: $highlight;
+    font-weight: bold;
     &:hover, &:focus {
         background-color: $highlight;
         color: $background;

@@ -9,6 +9,13 @@ layout: default
 <section class="content">
   <svg id="content-fader"></svg>
   <div class="post">
+    <div class="post-buttons">
+      <a href="{{ site.url }}\projects\" class="button-light-secondary">Home</a>
+      {% if page.source-url %}
+        <a href="{{ page.source-url }}" class="button-light-tertiary">See the source</a>
+      {% endif %}
+    </div>
+
     <div class="post-title"><h1>{{ page.title }}</h1></div>
     <div class="post-description">{{ page.description }}</div>
     <div class="post-header">
@@ -20,6 +27,13 @@ layout: default
 
     <div class="post-content">
       {{ content }}
+    </div>
+
+    <div class="post-buttons">
+      <a href="{{ site.url }}\projects\" class="button-light-secondary">Home</a>
+      {% if page.source-url %}
+        <a href="{{ page.source-url }}" class="button-light-tertiary">See the source </></a>
+      {% endif %}
     </div>
   </div>
   {% include footer.html %}  
