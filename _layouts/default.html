@@ -11,8 +11,11 @@
   <body>
     {% include sidebar.html %}
     {{ content }}
+    {% include lazyload.html %}
+    <script type="text/javascript" src="/assets/lightbox/lightbox.js"></script>
+    <link rel="stylesheet" href="/assets/lightbox/lightbox.css">
+    <script src="/assets/js/sidebar.js"></script>
+    <script src="/assets/js/fade-transitions.js"></script>
+    <script>fadeInPage();</script>
   </body>
-  <script src="/assets/js/sidebar.js"></script>
-  <script src="/assets/js/fade-transitions.js"></script>
-  <script>fadeInPage();</script>
 </html>

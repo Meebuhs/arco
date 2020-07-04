@@ -92,6 +92,24 @@ mathjax: true | false
 
 Simply add your favicon `favicon.png` to the root of your site.
 
+### Lazy loading
+
+In order to enable lazy loading on an image you must add a `data-echo` attribute like so:
+
+```html
+<img src="/assets/placeholder-for-image.png" alt="alt-text" data-echo="/assets/actual-image.png" />
+```
+
+### Image lightbox
+
+In order to open an image in a fullscreen lightbox on click, you must wrap the image in a link tag like so: 
+
+```html
+<a href="/assets/actual-image.png">
+    <img src="/assets/placeholder-for-image.png" alt="alt-text" data-echo="/assets/actual-image.png" />
+</a>
+```
+
 ### Markdown features
 
 [Check here](https://meebuhs.github.io/projects/arco) for examples of the supported markdown features.
