@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(event.target.id != 'next' && event.target.id != 'prev'){
             this.innerHTML = '';
             document.getElementById('lightbox').style.display = 'none';
+            document.body.style.overflow="visible";
         }
     });
     
@@ -121,6 +122,7 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();
             document.getElementById('lightbox').innerHTML = '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://www.youtube.com/embed/'+this.getAttribute('data-id')+'?autoplay=1&showinfo=0&rel=0"></iframe></div>';
             document.getElementById('lightbox').style.display = 'block';
+            document.body.style.overflow="hidden";
 
             setGallery(this);
         });
@@ -133,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();
             document.getElementById('lightbox').innerHTML = '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\''+this.getAttribute('href')+'\') center center / contain no-repeat;" title="'+this.getAttribute('title')+'" ><img src="'+this.getAttribute('href')+'" alt="'+this.getAttribute('title')+'" /></div><span>'+this.getAttribute('title')+'</span>';
             document.getElementById('lightbox').style.display = 'block';
+            document.body.style.overflow="hidden";
 
             setGallery(this);
         });
