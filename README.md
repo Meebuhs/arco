@@ -83,6 +83,7 @@ permalink: /projects/post-title
 source-url: https://project.source/link/
 cover-image: /assets/image-for-front-page.png
 image: /assets/image-for-top-of-post.png 
+tags: [tags, which, relate, to, post]
 mathjax: true | false
 ---
 ```
