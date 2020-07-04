@@ -23,7 +23,9 @@ layout: default
       &middot;
       <a href="{{ "/projects/" }}{{ page.category }}" class="fade-onclick"><span class="post-category">{{ page.category }}</span></a>
     </div>
-    <img class="post-image" src="{{ page.image }}" />
+    <a href="{{ page.image }}">
+      <img class="post-image" alt="{{ page.title }} | {{ page.description | truncate: 80 }}" src="{{ page.image }}" />
+    </a>
 
     <div class="post-content">
       {{ content }}
