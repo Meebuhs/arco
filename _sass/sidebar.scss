@@ -10,7 +10,6 @@
     }
     h6 {
         text-transform: uppercase;
-        font-size: .9rem;
         color: $text-colour-light;
     }
     a {
@@ -35,7 +34,7 @@
 @media only screen and (orientation: portrait) {
     #sidebar {
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         text-align: center;
     }
@@ -50,9 +49,37 @@
         height: $sidebar-height-min;
     }
 
-    .sidebar-text {
+    .sidebar-header {
         display: flex;
-        flex-direction: column;
+        margin-left: 1em;
+    }
+
+    .sidebar-image-container {
+        margin-right: 1em;
+    }
+
+    .sidebar-image {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .sidebar-text {
+        h1 {
+            font-size: 2.5em;
+            margin-top: -0.3em;
+        }
+        h6 {
+            font-size: 1.3em;
+            margin: 0;
+        }
+        text-align: start;
+    }
+
+    .sidebar-links {
+        font-size: 1.5em;
+        margin-right: 1em;
+        text-align: end;
     }
 
     .content {
@@ -104,6 +131,12 @@
         width: $sidebar-width;
         height: 100%;
     }
+
+    .sidebar-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
     
     .content {
         flex: 1;

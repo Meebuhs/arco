@@ -1,23 +1,33 @@
 <section id="sidebar" class="sidebar"> 
     <svg id="sidebar-fader"></svg>
-    <div class="sidebar-text">
-        {% if site.image %}<img class="site-image" src="{{ site.image }}" />{% endif %}
-        <h1><a href="{{ "/projects/" }}" class="fade-onclick">{{ site.title }}</a></h1>
-        <h6>{{ site.description }}</h6>
+    <div class="sidebar-header">
+        {% if site.image %}
+            <div class="sidebar-image-container">
+                <img class="sidebar-image" src="{{ site.image }}" />
+            </div>
+        {% endif %}
+        <div class="sidebar-text">
+            <h1><a href="{{ "/projects/" }}" class="fade-onclick">{{ site.title }}</a></h1>
+            <h6>{{ site.description }}</h6>
+        </div>
     </div>
     <div class="sidebar-links">
-        {% assign identifier = page.url | split: "/" | last %}
-        {% if identifier  == "completed" %}
-        completed
-        {% else %}
-            <a href="{{ "/projects/completed" }}" class="fade-onclick">completed</a>
-        {% endif %}
-        / 
-        {% if identifier  == "ongoing" %}
-            ongoing
-        {% else %}
-            <a href="{{ "/projects/ongoing" }}" class="fade-onclick">ongoing</a>
-        {% endif %}
-        {% if site.github_url %} / <a href="{{ site.github_url }}">github</a> {% endif %}{% if site.resume %} / <a href="{{ "/resume" }}" class="fade-onclick">resume</a> {% endif %}
+        <div class="sidebar-links-top">
+            {% assign identifier = page.url | split: "/" | last %}
+            {% if identifier  == "completed" %}
+            completed
+            {% else %}
+                <a href="{{ "/projects/completed" }}" class="fade-onclick">completed</a>
+            {% endif %}
+            / 
+            {% if identifier  == "ongoing" %}
+                ongoing
+            {% else %}
+                <a href="{{ "/projects/ongoing" }}" class="fade-onclick">ongoing</a>
+            {% endif %}
+        </div>
+        <div class="sidebar-links-bottom">
+            {% if site.github_url %} <a href="{{ site.github_url }}">github</a> / {% endif %}{% if site.resume %}<a href="{{ "/resume" }}" class="fade-onclick">resume</a> {% endif %}
+        </div>
     </div>
 </section>
