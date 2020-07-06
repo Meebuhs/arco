@@ -8,7 +8,6 @@
     }
     h6 {
         text-transform: uppercase;
-        font-size: .9rem;
         color: $text-colour-light;
     }
     a {
@@ -39,4 +38,10 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
+}
+
+.cover-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }

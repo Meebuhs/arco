@@ -30,7 +30,7 @@
 .list-post-title {
     color: $text-colour-dark;
     width: 100%;
-    font-size: 18px;
+    font-size: 1.5em;
     font-weight: bold;
     a {
         color: white;
@@ -43,7 +43,7 @@
 .list-post-summary {
     color: $summary-colour;
     margin: 0.4em 0;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .list-post-footer {
@@ -53,12 +53,12 @@
 .list-post-date {
     color: $secondary-highlight;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.9em;
 }
 
 .list-post-category { 
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.9em;
     color: $primary-highlight;
     &:hover, &:focus {
         color: lighten($primary-highlight, 14%);
@@ -67,7 +67,7 @@
 
 .list-post-tags {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.9em;
     color: $tertiary-highlight;
     margin-top: 0.4em;
 }

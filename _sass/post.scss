@@ -14,7 +14,7 @@
 .post-date {
     color: $secondary-highlight;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.9em;
 }
 
 .post-image {
@@ -26,7 +26,7 @@
 
 .post-category { 
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.9em;
     color: $primary-highlight;
     &:hover, &:focus {
         color: lighten($primary-highlight, 14%);
