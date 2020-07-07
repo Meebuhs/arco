@@ -36,9 +36,12 @@ layout: default
     </div>
 
     <div class="post-buttons">
-      <a href="{{ site.url }}\projects\" class="button-light-secondary">Home</a>
-      {% if page.source-url %}
-        <a href="{{ page.source-url }}" class="button-light-tertiary">See the source </></a>
+      <a href="{{ site.url }}\projects\" class="button-light-primary">Home</a>
+      {% if page.urls.source %}
+        <a href="{{ page.urls.source }}" class="button-light-secondary">See the source</a>
+      {% endif %}
+      {% if page.urls.download %}
+        <a href="{{ page.urls.download }}" class="button-light-tertiary">Download {{ page.title }}</a>
       {% endif %}
     </div>
   </div>
