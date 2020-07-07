@@ -10,7 +10,9 @@ layout: default
     <div class="list-post">
       <a href="{{ post.url }}" class="fade-onclick">
         <div class="list-post-link">
-          <img class="list-post-image" src="{{ post.cover-image }}" />
+          {% if post.images.cover %}
+            <img class="list-post-image" src="{{ post.images.cover }}" />
+          {% endif %}
           <div class="list-post-info">
             <div class="list-post-title">{{ post.title }}</div>
             <div class="list-post-summary">{{ post.summary }}</div>

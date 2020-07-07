@@ -80,9 +80,12 @@ title: Post title
 description: Post description
 category: completed | ongoing
 permalink: /projects/post-title
-source-url: https://project.source/link/
-cover-image: /assets/image-for-front-page.png
-image: /assets/image-for-top-of-post.png 
+urls:
+    source: https://project.source/link/
+    download: https://project.download/link/
+images: 
+    cover: /assets/image-for-front-page.png
+    top: /assets/image-for-top-of-post.png 
 tags: [tags, which, relate, to, post]
 mathjax: true | false
 ---

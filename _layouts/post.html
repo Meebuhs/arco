@@ -10,10 +10,14 @@ layout: default
   <svg id="content-fader"></svg>
   <div class="post">
     <div class="post-buttons">
-      <a href="{{ site.url }}\projects\" class="button-light-secondary">Home</a>
-      {% if page.source-url %}
-        <a href="{{ page.source-url }}" class="button-light-tertiary">See the source</a>
+      <a href="{{ site.url }}\projects\" class="button-light-primary">Home</a>
+      {% if page.urls.source %}
+        <a href="{{ page.urls.source }}" class="button-light-secondary">See the source</a>
       {% endif %}
+      {% if page.urls.download %}
+        <a href="{{ page.urls.download }}" class="button-light-tertiary">Download {{ page.title }}</a>
+      {% endif %}
+      
     </div>
 
     <div class="post-title"><h1>{{ page.title }}</h1></div>
@@ -23,8 +27,8 @@ layout: default
       &middot;
       <a href="{{ "/projects/" }}{{ page.category }}" class="fade-onclick"><span class="post-category">{{ page.category }}</span></a>
     </div>
-    <a href="{{ page.image }}">
-      <img class="post-image" alt="{{ page.title }} | {{ page.description | truncate: 80 }}" src="{{ page.image }}" />
+    <a href="{{ page.images.top }}">
+      <img class="post-image" alt="{{ page.title }} | {{ page.description | truncate: 80 }}" src="{{ page.images.top }}" />
     </a>
 
     <div class="post-content">
