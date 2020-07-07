@@ -19,7 +19,8 @@
 
 .post-image {
     display: block;
-    width: 70%;
+    max-width: 70%;
+    max-height: 50vh;
     margin: 2em auto 0 auto;
     border-radius: 5px;
 }
