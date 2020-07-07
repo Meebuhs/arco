@@ -27,7 +27,15 @@
             {% endif %}
         </div>
         <div class="sidebar-links-bottom">
-            {% if site.github_url %} <a href="{{ site.github_url }}">github</a> / {% endif %}{% if site.resume %}<a href="{{ "/resume" }}" class="fade-onclick">resume</a> {% endif %}
+            {% if site.github_url %}
+                <a href="{{ site.github_url }}">github</a>
+            {% endif %}
+            {% if site.github_url and site.resume %}
+                 / 
+            {% endif %}
+            {% if site.resume %}
+                <a href="{{ "/resume" }}" class="fade-onclick">resume</a>
+            {% endif %}
         </div>
     </div>
 </section>
