@@ -10,6 +10,7 @@ and this project adheres to Semantic Versioning(https://semver.org/spec/v2.0.0.h
 
 ### Fixed
  - Fixed errant / in sidebar links when github specified but resume not specified
+ - Fixed post button spacing on mobile
 
 ### Changed
  - Changed sidebar spacing in landscape
