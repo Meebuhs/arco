@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on Keep a Changelog(https://keepachangelog.com/en/1.0.0/),
 and this project adheres to Semantic Versioning(https://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## 0.7.0 - 2020-07-09
 ### Added
  - Added better responsive layouts for very narrow and very wide displays
 
@@ -12,6 +12,7 @@ and this project adheres to Semantic Versioning(https://semver.org/spec/v2.0.0.h
  - Fixed errant / in sidebar links when github specified but resume not specified
  - Fixed post button spacing on mobile
  - Fixed language label in highlighted code blocks
+ - Fixed page transition on home button
 
 ### Changed
  - Changed sidebar spacing in landscape
