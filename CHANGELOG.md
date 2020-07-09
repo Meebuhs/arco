@@ -5,6 +5,9 @@ The format is based on Keep a Changelog(https://keepachangelog.com/en/1.0.0/),
 and this project adheres to Semantic Versioning(https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
+### Added
+ - Added better responsive layouts for very narrow and very wide displays
+
 ### Fixed
  - Fixed errant / in sidebar links when github specified but resume not specified
 

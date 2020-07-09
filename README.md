@@ -1,6 +1,6 @@
 # arco
 
-Arco is a responsive fixed-sidebar layout with a two column masonry grid which also features a landing page, a 404 page, smooth page transitions and a simple permalink structure.
+Arco is a responsive fixed-sidebar layout with a responsive masonry grid which also features a landing page, a 404 page, smooth page transitions and a simple permalink structure.
 
 This theme also utilises [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag) and [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) to ensure your work will be seen.
 
