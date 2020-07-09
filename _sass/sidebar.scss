@@ -31,103 +31,36 @@
     transition: all .35s ease;
 }
 
-@media only screen and (orientation: portrait) and (min-width: 450px) {
-    #sidebar {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-    }
-
-    .sidebar {
-        width: 100%;
-        height: $sidebar-height;
-    }
-
-    .sidebar-minimised {
-        width: 100%;
-        height: $sidebar-height-min;
-    }
-
-    .sidebar-header {
-        display: flex;
-        margin-left: 1em;
-    }
-
-    .sidebar-image-container {
-        margin-right: 1em;
-    }
-
-    .sidebar-image {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-    }
-
-    .sidebar-text {
-        h1 {
-            margin-top: -0.3em;
-        }
-        h6 {
-            margin: 0;
-        }
-        text-align: start;
-    }
-
-    .sidebar-links {
-        margin-right: 1em;
-        text-align: end;
-    }
-
-    .content {
-        flex: 1;
-        max-width: 100%;
-        margin: 190px 1em 1em 1em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #content-fader {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        height: calc(100% - #{$sidebar-height});
-        width: 100%;
-        z-index: 9999;
-        pointer-events: none;
-        background: white;
-        opacity: 1;
-        animation-duration: .35s;
-        animation-timing-function: ease;
-    }
-
-    #sidebar-fader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: $sidebar-height;
-        width: 100%;
-        z-index: 9999;
-        pointer-events: none;
-        background: $sidebar-colour;
-        opacity: 1;
-        animation-duration: .35s;
-        animation-timing-function: ease;
-    }
-
-    .post-buttons {
-        margin: 3em 0;
-    }
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media only screen and (orientation: portrait) and (max-width: 450px) {
-    #sidebar {
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-    }
+#content-fader {
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+    pointer-events: none;
+    background: white;
+    opacity: 1;
+    animation-duration: .35s;
+    animation-timing-function: ease;
+}
 
+#sidebar-fader {
+    position: fixed;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+    background: $sidebar-colour;
+    opacity: 1;
+    animation-duration: .35s;
+    animation-timing-function: ease;
+}
+
+@media only screen and (orientation: portrait) {
     .sidebar {
         width: 100%;
         height: $sidebar-height;
@@ -138,62 +71,93 @@
         height: $sidebar-height-min;
     }
 
-    .sidebar-image-container {
-        display: none;
-    }
-
     .sidebar-text {
-        h1 {
-            margin-top: -0.3em;
-        }
         h6 {
             margin: 0;
         }
     }
 
     .content {
-        flex: 1;
         max-width: 100%;
-        margin: 190px 1em 1em 1em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        margin: calc(#{$sidebar-height} + 1em) 1em 1em 1em;
     }
 
     #content-fader {
-        position: fixed;
         bottom: 0;
-        right: 0;
         height: calc(100% - #{$sidebar-height});
         width: 100%;
-        z-index: 9999;
-        pointer-events: none;
-        background: white;
-        opacity: 1;
-        animation-duration: .35s;
-        animation-timing-function: ease;
     }
 
     #sidebar-fader {
-        position: fixed;
         top: 0;
-        left: 0;
         height: $sidebar-height;
         width: 100%;
-        z-index: 9999;
-        pointer-events: none;
-        background: $sidebar-colour;
-        opacity: 1;
-        animation-duration: .35s;
-        animation-timing-function: ease;
     }
 
-    .post-buttons {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        a {
-            margin: .5em;
+    @media (min-width: 450px) {
+        #sidebar {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .sidebar-header {
+            display: flex;
+            margin-left: 1em;
+        }
+
+        .sidebar-image-container {
+            margin-right: 1em;
+        }
+    
+        .sidebar-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .sidebar-text {
+            text-align: start;
+            h1 {
+                margin-top: -0.2em;
+            }
+        }
+
+        .sidebar-links {
+            margin-right: 1em;
+            text-align: end;
+        }
+
+        .post-buttons {
+            margin: 3em 0;
+        }
+    }
+
+    @media (max-width: 450px) {
+        #sidebar {
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .sidebar-image-container {
+            display: none;
+        }
+
+        .sidebar-text {
+            h1 {
+                margin-top: -0.3em;
+            }
+        }
+
+        .post-buttons {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            a {
+                margin: .5em;
+            }
         }
     }
 }
@@ -217,10 +181,6 @@
       }
     
     .content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: space-between;
         margin: 1em 1em 1em calc(1em + #{$sidebar-width});
     }
@@ -230,31 +190,16 @@
     }
 
     #content-fader {
-        position: fixed;
         top: 0;
-        right: 0;
         width: calc(100% - #{$sidebar-width});
         height: 100%;
-        z-index: 9999;
-        pointer-events: none;
         background: white;
-        opacity: 1;
-        animation-duration: .35s;
-        animation-timing-function: ease;
     }
 
     #sidebar-fader {
-        position: fixed;
         bottom: 0;
-        left: 0;
         height: 100%;
         width: $sidebar-width;
-        z-index: 9999;
-        pointer-events: none;
-        background: $sidebar-colour;
-        opacity: 1;
-        animation-duration: .35s;
-        animation-timing-function: ease;
     }
 
     .post-buttons {
