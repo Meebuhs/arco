@@ -11,6 +11,7 @@ and this project adheres to Semantic Versioning(https://semver.org/spec/v2.0.0.h
 ### Fixed
  - Fixed errant / in sidebar links when github specified but resume not specified
  - Fixed post button spacing on mobile
+ - Fixed language label in highlighted code blocks
 
 ### Changed
  - Changed sidebar spacing in landscape
