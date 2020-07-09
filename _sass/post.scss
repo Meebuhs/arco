@@ -1,10 +1,13 @@
 .post {
-    margin-top: 4em;
     width: 100%;
 }
 
+.post-buttons {
+    margin: 3em 0;
+}
+
 .post-title h1 {
-    margin: 1.5em 0 0 0;
+    margin: 0;
 }
 
 .post-description {
@@ -14,7 +17,7 @@
 .post-date {
     color: $secondary-highlight;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
 
 .post-image {
@@ -27,7 +30,7 @@
 
 .post-category { 
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     color: $primary-highlight;
     &:hover, &:focus {
         color: lighten($primary-highlight, 14%);

@@ -9,6 +9,7 @@
     background-color: $background;
     color: $highlight;
     font-weight: bold;
+    font-size: 1rem;
     &:hover, &:focus {
         background-color: $highlight;
         color: $background;
