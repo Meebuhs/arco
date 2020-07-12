@@ -2,6 +2,10 @@
 
 Arco is a responsive fixed-sidebar layout with a responsive masonry grid which also features a landing page, a 404 page, smooth page transitions and a simple permalink structure.
 
+<p align="center">
+  <img src="assets/images/demo.gif" width="60%">
+</p>
+
 This theme also utilises [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag) and [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) to ensure your work will be seen.
 
 See this theme in use at [meebuhs.github.io](https://meebuhs.github.io) and check the [source code](https://github.com/meebuhs/meebuhs.github.io) to get yourself started.
