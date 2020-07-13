@@ -12,7 +12,6 @@ and this project adheres to Semantic Versioning(https://semver.org/spec/v2.0.0.h
  - Fixed project descriptions on post list
  - Fixed images being clickable past their boundaries
 
-
  ### Changed
  - Change width of content on wide displays
 
