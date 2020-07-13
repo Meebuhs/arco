@@ -9,6 +9,11 @@
         <div class="sidebar-text">
             <h1><a href="{{ "/projects/" }}" class="fade-onclick">{{ site.title }}</a></h1>
             <h6>{{ site.description }}</h6>
+            {% if site.tagline %}
+                <div class="sidebar-tagline">
+                    {{ site.tagline }}
+                </div>
+            {% endif %}
         </div>
     </div>
     <div class="sidebar-links">

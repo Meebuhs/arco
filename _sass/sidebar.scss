@@ -21,6 +21,12 @@
     }
 }
 
+.sidebar-tagline {
+    max-width: 250px;
+    margin: auto;
+    color: $hover-colour;
+}
+
 #sidebar {
     display: flex;
     top: 0;

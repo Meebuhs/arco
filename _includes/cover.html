@@ -3,6 +3,11 @@
       {% if site.image %}<img class="cover-image" src="{{ site.image }}" />{% endif %}
       <h1>{{ site.title }}</a></h1>
       <h6>{{ site.description }}</h6>
+      {% if site.tagline %}
+        <div class="cover-tagline">
+          {{ site.tagline }}
+        </div>
+      {% endif %}
     </div>
     <div class="open-button-container">
         <a href="/projects/" id="open-button" class="button-dark">See my projects</a>
