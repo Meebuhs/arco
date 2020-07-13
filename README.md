@@ -109,10 +109,10 @@ In order to enable lazy loading on an image you must add a `data-echo` attribute
 
 ### Image lightbox
 
-In order to open an image in a fullscreen lightbox on click, you must wrap the image in a link tag like so: 
+In order to open an image in a fullscreen lightbox on click, you must wrap the image in a link tag with the class `clickable-image` like so: 
 
 ```html
-<a href="/assets/actual-image.png">
+<a class="clickable-image" href="/assets/actual-image.png">
     <img src="/assets/placeholder-for-image.png" alt="alt-text" data-echo="/assets/actual-image.png" />
 </a>
 ```
