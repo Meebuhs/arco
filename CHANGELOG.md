@@ -10,7 +10,8 @@ and this project adheres to Semantic Versioning(https://semver.org/spec/v2.0.0.h
 
 ### Fixed
  - Fixed project descriptions on post list
- - Add class to ensure post image clickable image does not extend past its boundary
+ - Fixed images being clickable past their boundaries
+
 
  ### Changed
  - Change width of content on wide displays
