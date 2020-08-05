@@ -8,6 +8,9 @@ and this project adheres to Semantic Versioning(https://semver.org/spec/v2.0.0.h
 ### Added
  - Added github icon to sidebar link
 
+### Fixed
+ - Fixed favicon not appearing on some pages
+
 ## 0.8.1 - 2020-08-05
 ### Added
  - Added display of tags to top of post
