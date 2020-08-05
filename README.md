@@ -10,6 +10,8 @@ This theme also utilises [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-t
 
 See this theme in use at [meebuhs.github.io](https://meebuhs.github.io) and check the [source code](https://github.com/meebuhs/meebuhs.github.io) to get yourself started.
 
+Also check the the usage examples in [this post](https://meebuhs.github.io/projects/arco).
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
@@ -82,7 +84,6 @@ There are additional parameters which can be set for use with `jekyll-seo-tag`. 
 layout: post
 title: Post title
 description: Post description
-category: completed | ongoing
 permalink: /projects/post-title
 urls:
     source: https://project.source/link/
@@ -116,10 +117,6 @@ In order to open an image in a fullscreen lightbox on click, you must wrap the i
     <img src="/assets/placeholder-for-image.png" alt="alt-text" data-echo="/assets/actual-image.png" />
 </a>
 ```
-
-### Markdown features
-
-[Check here](https://meebuhs.github.io/projects/arco) for examples of the supported markdown features.
 
 ### Resume support
 
