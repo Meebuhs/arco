@@ -47,7 +47,7 @@
 }
 
 .list-post-footer {
-    margin-left: 1.4em;
+    margin: 0 1.4em;
 }
 
 .list-post-date {
@@ -56,18 +56,8 @@
     font-size: 0.9rem;
 }
 
-.list-post-category { 
-    font-weight: bold;
-    font-size: 0.9rem;
-    color: $primary-highlight;
-    &:hover, &:focus {
-        color: lighten($primary-highlight, 14%);
-    }
-}
-
 .list-post-tags {
     font-weight: bold;
     font-size: 0.9rem;
     color: $tertiary-highlight;
-    margin-top: 0.4em;
 }

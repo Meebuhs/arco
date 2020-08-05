@@ -25,7 +25,7 @@ layout: default
     <div class="post-header">
       <span class="post-date">{{ page.date | date_to_string}}</span>
       &middot;
-      <a href="{{ "/projects/" }}{{ page.category }}" class="fade-onclick"><span class="post-category">{{ page.category }}</span></a>
+      <span class="post-tags">{{ page.tags | join: ", "}}</span>
     </div>
     <div class="clickable-image"><a href="{{ page.images.top }}" style="max-width: 80%">
       <img class="post-image" alt="{{ page.title }} | {{ page.description | truncate: 80 }}" src="{{ page.images.top }}" />

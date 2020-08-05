@@ -5,8 +5,7 @@ layout: default
 <section class="content">
   <svg id="content-fader"></svg>
   <div class="list-posts">
-    {% assign posts = site.categories[page.category] | default: site.posts %} 
-    {% for post in posts %}
+    {% for post in site.posts %}
     <div class="list-post">
       <a href="{{ post.url }}" class="fade-onclick">
         <div class="list-post-link">
@@ -22,10 +21,7 @@ layout: default
       <div class="list-post-footer">
         <span class="list-post-date">{{ post.date | date_to_string}}</span>
         &middot;
-        <a href="{{ "/projects/" }}{{ post.category }}" class="fade-onclick"><span class="list-post-category">{{ post.category }}</span></a>
-        <div class="list-post-tags">
-          {{ post.tags | join: ", "}}
-        </div>
+        <span class="list-post-tags">{{ post.tags | join: ", "}}</span>
       </div>
     </div>
     {% endfor %} 
