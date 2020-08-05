@@ -27,6 +27,12 @@
     color: $hover-colour;
 }
 
+.github-image {
+    width: 1rem;
+    margin-right: .5rem;
+    vertical-align: middle;
+}
+
 #sidebar {
     display: flex;
     top: 0;
@@ -155,6 +161,10 @@
             h1 {
                 margin-top: -0.3em;
             }
+        }
+
+        .sidebar-links {
+            margin-top: 1em;
         }
 
         .post-buttons {
